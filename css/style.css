@@ -1,15 +1,37 @@
-
-.wrapper {
-  width: 100%;
+/* base */
+body {
+  background-color: #2f3437;
 }
 
+h1 {
+  color: #ebebeb;
+  font-size: 40px;
+  font-family: 'Anton', sans-serif;
+}
+
+/* container */
 .container {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 8px;
   margin: 0 auto;
 }
 
+/* global_list */
 .global_list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.global_list.top {
+  grid-auto-rows: 25vh;
+}
+
+.global_list li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
+}
+
