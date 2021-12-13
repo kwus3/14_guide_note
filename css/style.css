@@ -11,52 +11,97 @@ p {
   font-weight: 100;
   font-size: 16px;
 }
+.bg_2x {
+  background: linear-gradient(#859ea3 0%, 70%, #4a9baa 100%) !important;
+}
+.bg_3x {
+  background: linear-gradient(#3d5ea0 0%, 70%, #234d9f 100%) !important;
+}
+.bg_4x {
+  background: linear-gradient( #9f4e3f 0%, 40%, #9f3b2c 100%) !important;
+}
+.bg_5x {
+  background: linear-gradient(#514a93 0%, 40%, #2e2969 100%) !important;
+}
+.bg_6x {
+  background: linear-gradient(175deg, #3e509a 0%, 65%, #cb7a2e 100%) !important;
+}
+
+
 
 /* container */
 .container {
   width: 100%;
-  padding: 0 2ch;
+  padding: 0 1.2ch;
   margin: 0 auto;
 }
 
 /* global_list */
 .global_list {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 76px;
+  gap: 1.2ch;
+}
+.global_list.top {
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 16vh;
-  gap: 1.5ch;
+  grid-auto-rows: 160px;
+  gap: 1.2ch;
 }
 .global_list a {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1ch;
-  border-radius: 2ch;
-  padding: 0 2ch;
+  justify-content :space-between;
+  border-radius: 1.2ch;
+  overflow: hidden;
   background: linear-gradient(#8e9294 0%, 55%, #595b5e 100%);
 }
-.global_list a.bg_2x {
-  background: linear-gradient(#859ea3 0%, 70%, #4a9baa 100%);
+.global_list .num {
+  width: 40%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+  display: grid;
+  place-content: center;
+  gap: 1ch;
 }
-.global_list a.bg_3x {
-  background: linear-gradient(#3d5ea0 0%, 70%, #234d9f 100%);
+.global_list .num.large {
+  width: 70%;
 }
-.global_list a.bg_4x {
-  background: linear-gradient( #9f4e3f 0%, 40%, #9f3b2c 100%);
-}
-.global_list a.bg_5x {
-  background: linear-gradient(#514a93 0%, 40%, #2e2969 100%);
-}
-.global_list a.bg_6x {
-  background: linear-gradient(175deg, #3e509a 0%, 65%, #cb7a2e 100%);
-}
-.global_list p {
-  font-size: 24px;
-}
-.global_list .sub {
-  font-size: 36px;
+.global_list .num p {
+  font-size: 9vw;
   font-family: 'Michroma', sans-serif;
 }
+.global_list .num span {
+  font-size: 4vw;
+}
+.global_list .tit {
+  flex-grow: 1;
+  text-align: center;
+}
+.global_list .tit p {
+  font-size: 5vw;
+}
 
+
+
+
+
+
+
+
+@media screen and (min-width: 600px) {
+  .global_list .num p {
+    font-size: 48px;
+  }
+  .global_list .num span {
+    font-size: 24px;
+  }
+  .global_list .tit p {
+    font-size: 24px;
+  }
+
+
+
+}
